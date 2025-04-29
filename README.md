@@ -37,7 +37,6 @@ This is a full-stack e-commerce website built using *React, **React Bootstrap, *
 
 - Node.js and npm installed
 - MongoDB installed and running (or use MongoDB Atlas)
--
 
 ### Setup
 

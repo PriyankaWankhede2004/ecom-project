@@ -1,0 +1,52 @@
+.bgimage {
+  background-Image: url('https://tse4.mm.bing.net/th?id=OIP.2rtGEwDS_iUC9UKiiDsWGAHaE8&pid=Api&P=0&h=220');
+  background-Size: fill;
+  background-Position: center;
+  background-Blend-Mode: overlay;
+  overflow: hidden;
+}
+
+/*welcome text scroll*/
+.text {
+  display: inline-block;
+  animation: scroll-left-right 7s linear infinite;
+}
+
+img.img-fluid {
+  transition: transform 0.3s ease;
+}
+
+img.img-fluid:hover {
+  transform: scale(1.05);
+}
+
+.marquee-banner {
+  background: #ffc107;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.marquee-text {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: scroll-left-right 12s linear infinite;
+}
+
+/*top deal text scroll*/
+.text-product {
+  display: inline-block;
+  animation: scroll-left-right 12s linear infinite;
+}
+
+@keyframes scroll-left-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}

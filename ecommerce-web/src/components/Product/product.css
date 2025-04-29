@@ -1,0 +1,45 @@
+.card:hover {
+  transform: scale(1.02);
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+  display: inline-block;
+  font-size: 17px;
+  color: rgb(225, 223, 232);
+  animation: scroll-left-right 12s linear infinite;
+}
+
+.marquee {
+  background: #097f97;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 6px 0;
+  text-align: center;
+}
+
+.cat-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/*cat font*/
+.f-size {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.card-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/*link text*/
+.l-text {
+  text-decoration: none;
+  color: inherit;
+}

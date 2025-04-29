@@ -1,0 +1,21 @@
+.navbar {
+    height: 48px;
+}
+
+/*vistlist heart*/
+.heart i:hover {
+    color: red;
+    text-align-last: leftcd;
+}
+
+.navbar-height {
+    padding: 30px 0;
+}
+
+/*navbar font and gap*/
+.font-and-flex {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

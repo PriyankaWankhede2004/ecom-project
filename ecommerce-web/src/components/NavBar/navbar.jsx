@@ -29,7 +29,13 @@ const MyNavbar = () => {
     }
   }, []);
 
-  const handleClose = () => setShowModal(false);
+ const handleClose = () => {
+  setFormData({
+    userId: '', password: '', name: '', email: '',
+    address: '', mobile: '', state: '', district: '', country: ''
+  });
+  setShowModal(false);
+};
   const handleShow = () => setShowModal(true);
 
   const handleLogout = () => {

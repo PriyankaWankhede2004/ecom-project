@@ -19,12 +19,12 @@ const VisitList = () => {
   const [list, setList] = useState([]);
 
   const fetchVisitList = async () => {
-    const res = await axios.get(`http://localhost:5000/api/visitlist/${userId}`);
+    const res = await axios.get(`https://ecom-project-1.onrender.com/api/visitlist/${userId}`);
     setList(res.data);
   };
 
   const handleRemove = async (productId) => {
-    await axios.delete(`http://localhost:5000/api/visitlist/${userId}/${productId}`);
+    await axios.delete(`https://ecom-project-1.onrender.com/api/visitlist/${userId}/${productId}`);
     fetchVisitList();
   };
 

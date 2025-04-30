@@ -8,7 +8,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (user?.userId) {
-      axios.get(`http://localhost:5000/api/auth/profile/${user.userId}`)
+      axios.get(`https://ecom-project-1.onrender.com/api/auth/profile/${user.userId}`)
         .then(res => setProfile(res.data));
     }
   }, []);

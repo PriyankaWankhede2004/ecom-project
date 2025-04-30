@@ -31,7 +31,7 @@ const CartList = () => {
   const [discount, setDiscount] = useState(0);
 
   const fetchCart = async () => {
-    const res = await axios.get(`http://localhost:5000/api/cart/${userId}`);
+    const res = await axios.get(`https://ecom-project-1.onrender.com/api/cart/${userId}`);
     setCart(res.data);
 
     const quantities = {};
@@ -42,7 +42,7 @@ const CartList = () => {
   };
 
   const handleRemove = async (productId) => {
-    await axios.delete(`http://localhost:5000/api/cart/${userId}/${productId}`);
+    await axios.delete(`https://ecom-project-1.onrender.com/api/cart/${userId}/${productId}`);
     fetchCart();
   };
 
@@ -89,7 +89,7 @@ const CartList = () => {
     };
 
     try {
-      await axios.post('http://localhost:5000/api/orders', order);
+      await axios.post('https://ecom-project-1.onrender.com/api/orders', order);
       Swal.fire('Ordered', 'Your order has been placed!', 'success');
       setShowForm(false);
       setForm({ name: '', address: '', mobile: '', district: '', country: '', state: '' });

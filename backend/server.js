@@ -11,7 +11,11 @@ const visitRoutes = require('./routes/visitRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin:
+    'https://ecom-project-woad.vercel.app',
+  credentials:true
+}));
 app.use(express.json());
 
 connectDB();

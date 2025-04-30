@@ -65,7 +65,7 @@ const ProductDetails = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/cart', cartItem);
+      await axios.post('https://ecom-project-1.onrender.com/api/cart', cartItem);
       Swal.fire('Added', 'Product added to cart', 'success');
     } catch (error) {
       const msg = error.response?.data?.msg || 'This product is already in cart';
@@ -77,7 +77,7 @@ const ProductDetails = () => {
     const fetchWishlistStatus = async () => {
       if (userId && product) {
         try {
-          const res = await axios.get(`http://localhost:5000/api/visitlist/${userId}`);
+          const res = await axios.get(`https://ecom-project-1.onrender.com/api/visitlist/${userId}`);
           const isInList = res.data.some(item => item.productId === product.id);
           setWishlisted(isInList);
         } catch (error) {
@@ -106,10 +106,10 @@ const ProductDetails = () => {
   
     try {
       if (!wishlisted) {
-        await axios.post('http://localhost:5000/api/visitlist', item);
+        await axios.post('https://ecom-project-1.onrender.com/api/visitlist', item);
         setWishlisted(true);
       } else {
-        await axios.delete(`http://localhost:5000/api/visitlist/${userId}/${product.id}`);
+        await axios.delete(`https://ecom-project-1.onrender.com/api/visitlist/${userId}/${product.id}`);
         setWishlisted(false);
       }
     } catch (error) {
@@ -164,7 +164,7 @@ const ProductDetails = () => {
     };
   
     try {
-      await axios.post('http://localhost:5000/api/orders', order);
+      await axios.post('https://ecom-project-1.onrender.com/api/orders', order);
       setShowForm(false);
       Swal.fire('Ordered', 'Your order was placed!', 'success');
       setErrors({});

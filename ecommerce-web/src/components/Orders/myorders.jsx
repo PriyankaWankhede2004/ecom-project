@@ -18,12 +18,12 @@ const OrderList = () => {
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
-    const res = await axios.get(`http://localhost:5000/api/orders/${userId}`);
+    const res = await axios.get(`https://ecom-project-1.onrender.com/api/orders/${userId}`);
     setOrders(res.data.reverse());
     };
   
   const cancelItem = async (orderId, itemId) => {
-    await axios.patch(`http://localhost:5000/api/orders/${orderId}/cancel-item/${itemId}`);
+    await axios.patch(`https://ecom-project-1.onrender.com/api/orders/${orderId}/cancel-item/${itemId}`);
     Swal.fire('Cancelled', 'Item cancelled from order', 'info');
     fetchOrders();
   };

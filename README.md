@@ -54,7 +54,8 @@ used your db connection
 cd backend
 mongod
 npm start or use node server.js
+```
 
-## Hosted link:
-- [Ecommerce-web](https://ecom-project-woad.vercel.app/)
+### Live link Ecom:
+https://ecom-project-woad.vercel.app/
 

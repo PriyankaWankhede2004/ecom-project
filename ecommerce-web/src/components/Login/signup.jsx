@@ -35,7 +35,7 @@ const SignupForm = ({ formData, setFormData, setIsSignup }) => {
 
   const handleSignup = async () => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', formData);
+      await axios.post('https://ecom-project-1.onrender.com/api/auth/register', formData);
       Swal.fire('Success', 'Registered successfully', 'success');
       setFormData({});
       setIsSignup(false);

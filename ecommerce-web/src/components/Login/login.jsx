@@ -24,7 +24,7 @@ const LoginForm = ({ formData, setFormData, handleClose, setLoggedInUser, naviga
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
+      const res = await axios.post('https://ecom-project-1.onrender.com/api/auth/login', {
         userId: formData.userId,
         password: formData.password,
       });
